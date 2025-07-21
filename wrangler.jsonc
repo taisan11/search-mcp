@@ -2,7 +2,13 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "search-mcp",
   "main": "src/index.ts",
-  "compatibility_date": "2025-07-20"
+  "compatibility_date": "2025-07-20",
+  "routes": [
+    {
+      "pattern": "search-mcp.taisan11.f5.si",
+      "custom_domain": true
+    }
+  ]
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],

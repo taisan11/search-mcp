@@ -52,6 +52,14 @@ mcpServer.tool(
   }
 )
 
+app.get('/', (c) => {
+  return c.html(`
+    <h1>Welcome to the MCP Search Server</h1>
+    <p>Use the /mcp endpoint to interact with the MCP server.</p>
+    <p>Make sure to set the X-API-URL header to the API endpoint you want to search against.</p>
+    `)
+})
+
 app.all('/mcp', async (c) => {
   XAPI_URL = c.req.header('X-API-URL')
   const transport = new StreamableHTTPTransport()
