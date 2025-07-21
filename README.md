@@ -1,21 +1,4 @@
-```txt
-npm install
-npm run dev
-```
-
-```txt
-npm run deploy
-```
-
-[For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
-
-```txt
-npm run cf-typegen
-```
-
-Pass the `CloudflareBindings` as generics when instantiation `Hono`:
-
-```ts
-// src/index.ts
-const app = new Hono<{ Bindings: CloudflareBindings }>()
-```
+searxngを利用して検索する簡易的なMCPです。  
+A simple MCP that uses searxng for searching.  
+X-API-URLヘッダーにベースURLを設定してください。
+Please set the base URL in the X-API-URL header.
